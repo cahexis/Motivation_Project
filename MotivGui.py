@@ -13,6 +13,7 @@ def getcurrentval():
 
 def updateval():
     current_val = getcurrentval()
+    value_label.config(text=str(current_val))
     print(current_val)
 
 
@@ -41,4 +42,8 @@ remove.place(x=30,y=75)
 add = tk.Button(root, text="+", font=('Verdana', 30),foreground='green', command=addval)
 add.place(x=300,y=75)
 
+value_label = tk.Label(root, text="", font=('Verdana', 40))
+value_label.place(x=170, y=260)
+
+updateval()
 root.mainloop()
